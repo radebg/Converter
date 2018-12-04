@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classconverter_1_1_input_file" kind="class" prot="public">
+    <compoundname>converter::InputFile</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classconverter_1_1_input_file_1a057ae62e06608ce9193b43393bad0380" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string converter.InputFile.filePath</definition>
+        <argsstring></argsstring>
+        <name>filePath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Projekti/VS2017/converter/converter/InputFile.cs" line="12" column="1" bodyfile="E:/Projekti/VS2017/converter/converter/InputFile.cs" bodystart="12" bodyend="-1"/>
+        <referencedby refid="classconverter_1_1_input_file_1a81a121ec1c1d8dce58c720a014d2aa68" compoundref="_input_file_8cs" startline="16" endline="21">converter.InputFile.InputFile</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classconverter_1_1_input_file_1a2c29e44bb18f60b50cd1fce95e90f0ce" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string converter.InputFile.fileName</definition>
+        <argsstring></argsstring>
+        <name>fileName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Projekti/VS2017/converter/converter/InputFile.cs" line="13" column="1" bodyfile="E:/Projekti/VS2017/converter/converter/InputFile.cs" bodystart="13" bodyend="-1"/>
+        <referencedby refid="classconverter_1_1_input_file_1a81a121ec1c1d8dce58c720a014d2aa68" compoundref="_input_file_8cs" startline="16" endline="21">converter.InputFile.InputFile</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classconverter_1_1_input_file_1a5fc6efe7ac6efb5dbd63ddf14a03a6fc" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string converter.InputFile.fileExtension</definition>
+        <argsstring></argsstring>
+        <name>fileExtension</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Projekti/VS2017/converter/converter/InputFile.cs" line="14" column="1" bodyfile="E:/Projekti/VS2017/converter/converter/InputFile.cs" bodystart="14" bodyend="-1"/>
+        <referencedby refid="classconverter_1_1_input_file_1a81a121ec1c1d8dce58c720a014d2aa68" compoundref="_input_file_8cs" startline="16" endline="21">converter.InputFile.InputFile</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="classconverter_1_1_input_file_1a394fb68df300115a3dfc52be06d99e0b" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string converter.InputFile.FileName</definition>
+        <argsstring></argsstring>
+        <name>FileName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Projekti/VS2017/converter/converter/InputFile.cs" line="22" column="1" bodyfile="E:/Projekti/VS2017/converter/converter/InputFile.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="classconverter_1_1_input_file_1aa24d8e7109f272507a05735a70965c1c" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string converter.InputFile.FilePath</definition>
+        <argsstring></argsstring>
+        <name>FilePath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Projekti/VS2017/converter/converter/InputFile.cs" line="30" column="1" bodyfile="E:/Projekti/VS2017/converter/converter/InputFile.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="classconverter_1_1_input_file_1ad7af761c770979e974b8977bd4ba5c0b" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string converter.InputFile.FileExtension</definition>
+        <argsstring></argsstring>
+        <name>FileExtension</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Projekti/VS2017/converter/converter/InputFile.cs" line="38" column="1" bodyfile="E:/Projekti/VS2017/converter/converter/InputFile.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classconverter_1_1_input_file_1a81a121ec1c1d8dce58c720a014d2aa68" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>converter.InputFile.InputFile</definition>
+        <argsstring>(string fullFileName)</argsstring>
+        <name>InputFile</name>
+        <param>
+          <type>string</type>
+          <declname>fullFileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Projekti/VS2017/converter/converter/InputFile.cs" line="16" column="1" bodyfile="E:/Projekti/VS2017/converter/converter/InputFile.cs" bodystart="16" bodyend="21"/>
+        <references refid="classconverter_1_1_input_file_1a5fc6efe7ac6efb5dbd63ddf14a03a6fc" compoundref="_input_file_8cs" startline="14">converter.InputFile.fileExtension</references>
+        <references refid="classconverter_1_1_input_file_1a2c29e44bb18f60b50cd1fce95e90f0ce" compoundref="_input_file_8cs" startline="13">converter.InputFile.fileName</references>
+        <references refid="classconverter_1_1_input_file_1a057ae62e06608ce9193b43393bad0380" compoundref="_input_file_8cs" startline="12">converter.InputFile.filePath</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="E:/Projekti/VS2017/converter/converter/InputFile.cs" line="11" column="1" bodyfile="E:/Projekti/VS2017/converter/converter/InputFile.cs" bodystart="10" bodyend="45"/>
+    <listofallmembers>
+      <member refid="classconverter_1_1_input_file_1a5fc6efe7ac6efb5dbd63ddf14a03a6fc" prot="private" virt="non-virtual"><scope>converter::InputFile</scope><name>fileExtension</name></member>
+      <member refid="classconverter_1_1_input_file_1ad7af761c770979e974b8977bd4ba5c0b" prot="public" virt="non-virtual"><scope>converter::InputFile</scope><name>FileExtension</name></member>
+      <member refid="classconverter_1_1_input_file_1a394fb68df300115a3dfc52be06d99e0b" prot="public" virt="non-virtual"><scope>converter::InputFile</scope><name>FileName</name></member>
+      <member refid="classconverter_1_1_input_file_1a2c29e44bb18f60b50cd1fce95e90f0ce" prot="private" virt="non-virtual"><scope>converter::InputFile</scope><name>fileName</name></member>
+      <member refid="classconverter_1_1_input_file_1a057ae62e06608ce9193b43393bad0380" prot="private" virt="non-virtual"><scope>converter::InputFile</scope><name>filePath</name></member>
+      <member refid="classconverter_1_1_input_file_1aa24d8e7109f272507a05735a70965c1c" prot="public" virt="non-virtual"><scope>converter::InputFile</scope><name>FilePath</name></member>
+      <member refid="classconverter_1_1_input_file_1a81a121ec1c1d8dce58c720a014d2aa68" prot="public" virt="non-virtual"><scope>converter::InputFile</scope><name>InputFile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

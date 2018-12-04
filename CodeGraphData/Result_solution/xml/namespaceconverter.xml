@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespaceconverter" kind="namespace">
+    <compoundname>converter</compoundname>
+    <innerclass refid="classconverter_1_1_app" prot="public">converter::App</innerclass>
+    <innerclass refid="classconverter_1_1_input_file" prot="public">converter::InputFile</innerclass>
+    <innerclass refid="classconverter_1_1_main_window" prot="public">converter::MainWindow</innerclass>
+    <innernamespace refid="namespaceconverter_1_1_properties">converter::Properties</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="E:/Projekti/VS2017/converter/converter/App.xaml.cs" line="10" column="1"/>
+  </compounddef>
+</doxygen>

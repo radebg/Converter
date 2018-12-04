@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_4a566d0cef7fc7f26797eca5bba52673" kind="dir">
+    <compoundname>E:/Projekti</compoundname>
+    <innerdir refid="dir_db9f5ceac7c2359ed9b16f7ab8e08f0c">E:/Projekti/VS2017</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="E:/Projekti/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classconverter_1_1_properties_1_1_settings" kind="class" prot="package">
+    <compoundname>converter::Properties::Settings</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ApplicationSettingsBase</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classconverter_1_1_properties_1_1_settings_1aa718fd8ff915bcf71fe1cb5b248d399c" prot="private" static="yes" mutable="no">
+        <type><ref refid="classconverter_1_1_properties_1_1_settings" kindref="compound">Settings</ref></type>
+        <definition>Settings converter.Properties.Settings.defaultInstance</definition>
+        <argsstring></argsstring>
+        <name>defaultInstance</name>
+        <initializer>= ((<ref refid="classconverter_1_1_properties_1_1_settings" kindref="compound">Settings</ref>)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new <ref refid="classconverter_1_1_properties_1_1_settings" kindref="compound">Settings</ref>())))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Projekti/VS2017/converter/converter/Properties/Settings.Designer.cs" line="20" column="1" bodyfile="E:/Projekti/VS2017/converter/converter/Properties/Settings.Designer.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="classconverter_1_1_properties_1_1_settings_1a6f1b7d86d9dd405b60b0c50e60724543" prot="public" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="classconverter_1_1_properties_1_1_settings" kindref="compound">Settings</ref></type>
+        <definition>Settings converter.Properties.Settings.Default</definition>
+        <argsstring></argsstring>
+        <name>Default</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Projekti/VS2017/converter/converter/Properties/Settings.Designer.cs" line="22" column="1" bodyfile="E:/Projekti/VS2017/converter/converter/Properties/Settings.Designer.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="13">
+        <label>global::SystemConfiguration::ApplicationSettingsBase</label>
+      </node>
+      <node id="12">
+        <label>converter.Properties.Settings</label>
+        <link refid="classconverter_1_1_properties_1_1_settings"/>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="15">
+        <label>global::SystemConfiguration::ApplicationSettingsBase</label>
+      </node>
+      <node id="14">
+        <label>converter.Properties.Settings</label>
+        <link refid="classconverter_1_1_properties_1_1_settings"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>defaultInstance</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="E:/Projekti/VS2017/converter/converter/Properties/Settings.Designer.cs" line="18" column="1" bodyfile="E:/Projekti/VS2017/converter/converter/Properties/Settings.Designer.cs" bodystart="17" bodyend="29"/>
+    <listofallmembers>
+      <member refid="classconverter_1_1_properties_1_1_settings_1a6f1b7d86d9dd405b60b0c50e60724543" prot="public" virt="non-virtual"><scope>converter::Properties::Settings</scope><name>Default</name></member>
+      <member refid="classconverter_1_1_properties_1_1_settings_1aa718fd8ff915bcf71fe1cb5b248d399c" prot="private" virt="non-virtual"><scope>converter::Properties::Settings</scope><name>defaultInstance</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

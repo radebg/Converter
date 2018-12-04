@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classconverter_1_1_main_window" kind="class" prot="public">
+    <compoundname>converter::MainWindow</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Window</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classconverter_1_1_main_window_1abdc727c2ee74be8a460ad8fd2bcdc8b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>converter.MainWindow.MainWindow</definition>
+        <argsstring>()</argsstring>
+        <name>MainWindow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Projekti/VS2017/converter/converter/MainWindow.xaml.cs" line="25" column="1" bodyfile="E:/Projekti/VS2017/converter/converter/MainWindow.xaml.cs" bodystart="25" bodyend="29"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classconverter_1_1_main_window_1a5a6cf3fb0a7fc6a74c63d529bcf99c83" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void converter.MainWindow.File_Open_Button_Click</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>File_Open_Button_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Projekti/VS2017/converter/converter/MainWindow.xaml.cs" line="31" column="1" bodyfile="E:/Projekti/VS2017/converter/converter/MainWindow.xaml.cs" bodystart="31" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interaction logic for MainWindow.xaml </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="7">
+        <label>Window</label>
+      </node>
+      <node id="6">
+        <label>converter.MainWindow</label>
+        <link refid="classconverter_1_1_main_window"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="9">
+        <label>Window</label>
+      </node>
+      <node id="8">
+        <label>converter.MainWindow</label>
+        <link refid="classconverter_1_1_main_window"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="E:/Projekti/VS2017/converter/converter/MainWindow.xaml.cs" line="24" column="1" bodyfile="E:/Projekti/VS2017/converter/converter/MainWindow.xaml.cs" bodystart="23" bodyend="49"/>
+    <listofallmembers>
+      <member refid="classconverter_1_1_main_window_1a5a6cf3fb0a7fc6a74c63d529bcf99c83" prot="private" virt="non-virtual"><scope>converter::MainWindow</scope><name>File_Open_Button_Click</name></member>
+      <member refid="classconverter_1_1_main_window_1abdc727c2ee74be8a460ad8fd2bcdc8b7" prot="public" virt="non-virtual"><scope>converter::MainWindow</scope><name>MainWindow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

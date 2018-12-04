@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.6">
+  <compound refid="classconverter_1_1_app" kind="class"><name>converter::App</name>
+  </compound>
+  <compound refid="classconverter_1_1_input_file" kind="class"><name>converter::InputFile</name>
+    <member refid="classconverter_1_1_input_file_1a057ae62e06608ce9193b43393bad0380" kind="variable"><name>filePath</name></member>
+    <member refid="classconverter_1_1_input_file_1a2c29e44bb18f60b50cd1fce95e90f0ce" kind="variable"><name>fileName</name></member>
+    <member refid="classconverter_1_1_input_file_1a5fc6efe7ac6efb5dbd63ddf14a03a6fc" kind="variable"><name>fileExtension</name></member>
+    <member refid="classconverter_1_1_input_file_1a394fb68df300115a3dfc52be06d99e0b" kind="property"><name>FileName</name></member>
+    <member refid="classconverter_1_1_input_file_1aa24d8e7109f272507a05735a70965c1c" kind="property"><name>FilePath</name></member>
+    <member refid="classconverter_1_1_input_file_1ad7af761c770979e974b8977bd4ba5c0b" kind="property"><name>FileExtension</name></member>
+    <member refid="classconverter_1_1_input_file_1a81a121ec1c1d8dce58c720a014d2aa68" kind="function"><name>InputFile</name></member>
+  </compound>
+  <compound refid="classconverter_1_1_main_window" kind="class"><name>converter::MainWindow</name>
+    <member refid="classconverter_1_1_main_window_1abdc727c2ee74be8a460ad8fd2bcdc8b7" kind="function"><name>MainWindow</name></member>
+    <member refid="classconverter_1_1_main_window_1a5a6cf3fb0a7fc6a74c63d529bcf99c83" kind="function"><name>File_Open_Button_Click</name></member>
+  </compound>
+  <compound refid="classconverter_1_1_properties_1_1_resources" kind="class"><name>converter::Properties::Resources</name>
+    <member refid="classconverter_1_1_properties_1_1_resources_1ac80cae40d19eca1fe0afc495fb60603a" kind="variable"><name>resourceMan</name></member>
+    <member refid="classconverter_1_1_properties_1_1_resources_1a7e4931a3a0e13a6da0ea82078accd0b4" kind="variable"><name>resourceCulture</name></member>
+    <member refid="classconverter_1_1_properties_1_1_resources_1affc170ce32fe38f643d239ba8aef2c3b" kind="property"><name>ResourceManager</name></member>
+    <member refid="classconverter_1_1_properties_1_1_resources_1a99c66aeec4d1fa7b2b1ffba56e005495" kind="property"><name>Culture</name></member>
+    <member refid="classconverter_1_1_properties_1_1_resources_1ae910c715de14c03ea3ee80299bb711c3" kind="function"><name>Resources</name></member>
+  </compound>
+  <compound refid="classconverter_1_1_properties_1_1_settings" kind="class"><name>converter::Properties::Settings</name>
+    <member refid="classconverter_1_1_properties_1_1_settings_1aa718fd8ff915bcf71fe1cb5b248d399c" kind="variable"><name>defaultInstance</name></member>
+    <member refid="classconverter_1_1_properties_1_1_settings_1a6f1b7d86d9dd405b60b0c50e60724543" kind="property"><name>Default</name></member>
+  </compound>
+  <compound refid="namespaceconverter" kind="namespace"><name>converter</name>
+  </compound>
+  <compound refid="namespaceconverter_1_1_properties" kind="namespace"><name>converter::Properties</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_win32" kind="namespace"><name>Microsoft::Win32</name>
+  </compound>
+  <compound refid="namespace_system" kind="namespace"><name>System</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections_1_1_generic" kind="namespace"><name>System::Collections::Generic</name>
+  </compound>
+  <compound refid="namespace_system_1_1_configuration" kind="namespace"><name>System::Configuration</name>
+  </compound>
+  <compound refid="namespace_system_1_1_data" kind="namespace"><name>System::Data</name>
+  </compound>
+  <compound refid="namespace_system_1_1_i_o" kind="namespace"><name>System::IO</name>
+  </compound>
+  <compound refid="namespace_system_1_1_linq" kind="namespace"><name>System::Linq</name>
+  </compound>
+  <compound refid="namespace_system_1_1_reflection" kind="namespace"><name>System::Reflection</name>
+  </compound>
+  <compound refid="namespace_system_1_1_resources" kind="namespace"><name>System::Resources</name>
+  </compound>
+  <compound refid="namespace_system_1_1_runtime_1_1_compiler_services" kind="namespace"><name>System::Runtime::CompilerServices</name>
+  </compound>
+  <compound refid="namespace_system_1_1_runtime_1_1_interop_services" kind="namespace"><name>System::Runtime::InteropServices</name>
+  </compound>
+  <compound refid="namespace_system_1_1_text" kind="namespace"><name>System::Text</name>
+  </compound>
+  <compound refid="namespace_system_1_1_threading_1_1_tasks" kind="namespace"><name>System::Threading::Tasks</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows" kind="namespace"><name>System::Windows</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows_1_1_controls" kind="namespace"><name>System::Windows::Controls</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows_1_1_data" kind="namespace"><name>System::Windows::Data</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows_1_1_documents" kind="namespace"><name>System::Windows::Documents</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows_1_1_input" kind="namespace"><name>System::Windows::Input</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows_1_1_media" kind="namespace"><name>System::Windows::Media</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows_1_1_media_1_1_imaging" kind="namespace"><name>System::Windows::Media::Imaging</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows_1_1_navigation" kind="namespace"><name>System::Windows::Navigation</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows_1_1_shapes" kind="namespace"><name>System::Windows::Shapes</name>
+  </compound>
+  <compound refid="_app_8xaml_8cs" kind="file"><name>App.xaml.cs</name>
+  </compound>
+  <compound refid="_input_file_8cs" kind="file"><name>InputFile.cs</name>
+  </compound>
+  <compound refid="_main_window_8xaml_8cs" kind="file"><name>MainWindow.xaml.cs</name>
+  </compound>
+  <compound refid="_assembly_info_8cs" kind="file"><name>AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_resources_8_designer_8cs" kind="file"><name>Resources.Designer.cs</name>
+  </compound>
+  <compound refid="_settings_8_designer_8cs" kind="file"><name>Settings.Designer.cs</name>
+  </compound>
+  <compound refid="dir_1d387c174b7e2b3df6314dafe63beb03" kind="dir"><name>E:/Projekti/VS2017/converter/converter</name>
+  </compound>
+  <compound refid="dir_e9f2cf067290092c74a3dcf3b1590347" kind="dir"><name>E:/Projekti/VS2017/converter</name>
+  </compound>
+  <compound refid="dir_885cc87fac2d91e269af0a5a959fa5f6" kind="dir"><name>E:</name>
+  </compound>
+  <compound refid="dir_4a566d0cef7fc7f26797eca5bba52673" kind="dir"><name>E:/Projekti</name>
+  </compound>
+  <compound refid="dir_e150fe455e99156a19580f9d777a303c" kind="dir"><name>E:/Projekti/VS2017/converter/converter/Properties</name>
+  </compound>
+  <compound refid="dir_db9f5ceac7c2359ed9b16f7ab8e08f0c" kind="dir"><name>E:/Projekti/VS2017</name>
+  </compound>
+</doxygenindex>

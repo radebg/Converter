@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_1d387c174b7e2b3df6314dafe63beb03" kind="dir">
+    <compoundname>E:/Projekti/VS2017/converter/converter</compoundname>
+    <innerdir refid="dir_e150fe455e99156a19580f9d777a303c">E:/Projekti/VS2017/converter/converter/Properties</innerdir>
+    <innerfile refid="_app_8xaml_8cs">App.xaml.cs</innerfile>
+    <innerfile refid="_input_file_8cs">InputFile.cs</innerfile>
+    <innerfile refid="_main_window_8xaml_8cs">MainWindow.xaml.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="E:/Projekti/VS2017/converter/converter/"/>
+  </compounddef>
+</doxygen>
