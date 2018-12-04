@@ -67,7 +67,7 @@ namespace converter
 		{
 			if (!String.IsNullOrEmpty(outLine.Data))
 			{
-			//	MainWindow.UpdateStream = outLine;
+				MainWindow.UpdateStream = outLine;
 			}
 		}
 	}
