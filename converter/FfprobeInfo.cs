@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Reflection;
 
 namespace converter
 {
-	
+
 	public class FfprobeInfo
 	{
 		InputFileDetails typedObject;
@@ -26,35 +24,37 @@ namespace converter
 		int?[] streamWidth, streamHeight;
 		string examinedFile;
 		string jsonString;
-		public FfprobeInfo(string path, string name, string extension)
+		string workingFolder;
+		string logsFolder;
+
+
+
+		public FfprobeInfo(string path, string name, string extension, string workingFolder, string logsFolder)
 		{
 			examinedFile = path + name + extension;     //reconstructed path name
-														// todo - add working path
-		}
-		public FfprobeInfo(string path, string name, string extension, string workingPath)
-		{
-			examinedFile = path + name + extension;     //reconstructed path name
-														//todo - add working path
+			this.workingFolder = workingFolder;         //working folder
+			this.logsFolder = logsFolder;               //logs folder
 		}
 
 		// analyse input file with ffprobe
 		public void Analyse()
 		{
 			//clear contents of the output files
-			File.WriteAllText("d:\\stderr.txt", string.Empty);
-			File.WriteAllText("d:\\stdout.txt", string.Empty);
+			File.WriteAllText(logsFolder + "\\stderr.txt", string.Empty);
+			File.WriteAllText(logsFolder + "\\stdout.txt", string.Empty);
 
 			//todo - integrate working path
 
 
 			string commandString = "-show_format -show_streams -print_format json -loglevel quiet \"" + examinedFile + "\"";
 			//string commandString = "-select_streams v:0 -show_entries stream=width,height,bit_rate,duration -of default=noprint_wrappers=1 -print_format json \"" + examinedFile + "\"";
-
+			//location of the ffmpeg files after installation
+			string ffmpegExecutablePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)+"\\ffmpeg"; 
 			Process ffprobe = new Process
 			{
 				StartInfo =
 				{
-				FileName = "c:\\ffprobe.exe",
+				FileName =ffmpegExecutablePath+"\\ffprobe.exe",
 				Arguments = commandString,
 				UseShellExecute = false,
 				RedirectStandardOutput = true,
@@ -69,25 +69,25 @@ namespace converter
 			while (!ffprobe.StandardOutput.EndOfStream)
 			{
 				string stdout = ffprobe.StandardOutput.ReadLine();
-				//string stderr = ffprobe.StandardError.ReadLine();
-				//File.AppendAllText("d:\\stderr.txt", stderr + Environment.NewLine);
-				File.AppendAllText("d:\\stdout.txt", stdout + Environment.NewLine);
+				string stderr = ffprobe.StandardError.ReadLine();
+				File.AppendAllText(logsFolder + "\\stderr.txt", stderr + Environment.NewLine);
+				File.AppendAllText(logsFolder + "\\stdout.txt", stdout + Environment.NewLine);
 			}
 			ffprobe.WaitForExit();
 
 			//pickup json output as a string
-			jsonString = File.ReadAllText(@"d:\stdout.txt");
+			jsonString = File.ReadAllText(logsFolder + "\\stdout.txt");
 
 			JObject parent = JObject.Parse(jsonString);
 
-			// credentials for next line of code goes to Tim Miller: https://gist.github.com/drasticactions/b68a68e9d84ad4abd26addc33b8429a7
+			// credits for next line of code goes to Tim Miller: https://gist.github.com/drasticactions/b68a68e9d84ad4abd26addc33b8429a7
 
 			typedObject = JsonConvert.DeserializeObject<InputFileDetails>(jsonString);
 
 			// You could think it is funny... but I was trying to solve it for a week now :( (that is funny)
 
 			numberOfStreams = typedObject.streams.Count();  // get number of streams in opened file
-															
+
 			typeOfStream = new string[numberOfStreams];     //get type of each stream
 			streamWidth = new int?[numberOfStreams];
 			streamHeight = new int?[numberOfStreams];
@@ -119,11 +119,11 @@ namespace converter
 
 		public int NumberOfStreams
 		{
-			get { return numberOfStreams;}
+			get { return numberOfStreams; }
 		}
 		public string[] StreamType
 		{
-			get {return typeOfStream; }
+			get { return typeOfStream; }
 		}
 		public int?[] StreamWidth
 		{

@@ -1,18 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Win32;
+using System;
+using System.IO;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using Microsoft.Win32;
 
 
 namespace converter
@@ -20,12 +9,32 @@ namespace converter
 	/// <summary>
 	/// Interaction logic for MainWindow.xaml
 	/// </summary>
+	/// 
 	public partial class MainWindow : Window
 	{
+
+		public static string workingFolder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Convertor";
+		public static string logsFolder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Convertor\\logs";
+		//check if it is first start of the application
+		//It is done by checking if there is "Converter" folder in main roaming\Appdata folder
+		public bool firstStart = !File.Exists(workingFolder);
+
+
 		public MainWindow()
 		{
+			initialiseStartupEnvironment();
 			InitializeComponent();
 		}
+
+		public void initialiseStartupEnvironment()
+		{
+			if (firstStart)
+			{
+				Directory.CreateDirectory(workingFolder);
+				Directory.CreateDirectory(logsFolder);
+			}
+		}
+
 		private void File_Open_Button_Click(object sender, RoutedEventArgs e)
 		{
 			OpenFileDialog openFileDialog = new OpenFileDialog(); // instanciate OpenFileDialog
@@ -43,7 +52,7 @@ namespace converter
 				FileExtension.Text = videoFile.FileExtension;
 
 				//instanciate ffprobeInfo file for analysing file
-				FfprobeInfo inputInfo = new FfprobeInfo(videoFile.FilePath, videoFile.FileName, videoFile.FileExtension);
+				FfprobeInfo inputInfo = new FfprobeInfo(videoFile.FilePath, videoFile.FileName, videoFile.FileExtension, workingFolder, logsFolder);
 				inputInfo.Analyse();
 
 				NumberOfStreams.Content = "Number of streams:  " + inputInfo.NumberOfStreams;
@@ -105,10 +114,22 @@ namespace converter
 				SavePath.Text = saveFileDialog.FileName;
 			}
 		}
+
 		public string UpdateStream
 		{
 			get { return ConverterFeed.Text; }
 			set { ConverterFeed.AppendText(value); }
 		}
+
+		private void mnuWokingDirectory_Click(object sender, RoutedEventArgs e)
+		{
+			SaveFileDialog workingFileDialog = new SaveFileDialog();
+			workingFileDialog.Title = "Working File Location";
+			if (workingFileDialog.ShowDialog() == true)
+			{
+				SavePath.Text = workingFileDialog.FileName;
+			}
+		}
+
 	}
 }
