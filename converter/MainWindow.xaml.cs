@@ -15,6 +15,8 @@ namespace converter
 
 		public static string workingFolder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Convertor";
 		public static string logsFolder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Convertor\\logs";
+		InputFile mediaFile;
+		
 		//check if it is first start of the application
 		//It is done by checking if there is "Converter" folder in main roaming\Appdata folder
 		public bool firstStart = !File.Exists(workingFolder);
@@ -45,57 +47,15 @@ namespace converter
 			if (openFileDialog.ShowDialog() == true)
 			{
 				//Instanciate input file
-				InputFile videoFile = new InputFile(openFileDialog.FileName);
-				FullFileName.Text = videoFile.FullFileName;
-				FilePath.Text = videoFile.FilePath;
-				FileName.Text = videoFile.FileName;
-				FileExtension.Text = videoFile.FileExtension;
 
+				mediaFile = new InputFile(openFileDialog.FileName, workingFolder, logsFolder);
 				//instanciate ffprobeInfo file for analysing file
-				FfprobeInfo inputInfo = new FfprobeInfo(videoFile.FilePath, videoFile.FileName, videoFile.FileExtension, workingFolder, logsFolder);
-				inputInfo.Analyse();
-
-				NumberOfStreams.Content = "Number of streams:  " + inputInfo.NumberOfStreams;
-				TextBoxInfo.Clear();
-				for (int i = 0; i < inputInfo.NumberOfStreams; i++)
-				{
-					TextBoxInfo.AppendText("Stream " + i + ": " + inputInfo.StreamType[i]);
-					if (inputInfo.StreamType[i] == "video")
-					{
-						TextBoxInfo.AppendText(Environment.NewLine);
-						TextBoxInfo.AppendText("	Width: " + inputInfo.StreamWidth[i].ToString());
-						TextBoxInfo.AppendText(Environment.NewLine);
-						TextBoxInfo.AppendText("	Height: " + inputInfo.StreamHeight[i].ToString());
-						TextBoxInfo.AppendText(Environment.NewLine);
-						TextBoxInfo.AppendText("	Codec: " + inputInfo.StreamCodecName[i]);
-						TextBoxInfo.AppendText(Environment.NewLine);
-						TextBoxInfo.AppendText("	Duration: " + inputInfo.StreamDuration[i]);
-						TextBoxInfo.AppendText(Environment.NewLine);
-						TextBoxInfo.AppendText("	Frame rate: " + inputInfo.StreamFrameRate[i]);
-						TextBoxInfo.AppendText(Environment.NewLine);
-						TextBoxInfo.AppendText("	Aspect Ratio: " + inputInfo.StreamAspectRatio[i]);
-						TextBoxInfo.AppendText(Environment.NewLine);
-						TextBoxInfo.AppendText("	Bit Rate: " + inputInfo.StreamBitRate[i]);
-						TextBoxInfo.AppendText(Environment.NewLine);
-
-					}
-					TextBoxInfo.AppendText(Environment.NewLine);
-					if (inputInfo.StreamType[i] == "audio")
-					{
-						TextBoxInfo.AppendText(Environment.NewLine);
-						TextBoxInfo.AppendText("	Codec: " + inputInfo.StreamCodecName[i]);
-						TextBoxInfo.AppendText(Environment.NewLine);
-						TextBoxInfo.AppendText("	Duration: " + inputInfo.StreamDuration[i]);
-						TextBoxInfo.AppendText(Environment.NewLine);
-						TextBoxInfo.AppendText("	Sample Rate: " + inputInfo.StreamSampleRate[i]);
-						TextBoxInfo.AppendText(Environment.NewLine);
-						TextBoxInfo.AppendText("	Number of Channels: " + inputInfo.StreamNumberOfChannels[i]);
-						TextBoxInfo.AppendText(Environment.NewLine);
-						TextBoxInfo.AppendText("	Bit Rate: " + inputInfo.StreamBitRate[i]);
-						TextBoxInfo.AppendText(Environment.NewLine);
-
-					}
-				}
+				//mediaInfo = new FfprobeInfo(mediaFile.FilePath, mediaFile.FileName, mediaFile.FileExtension, workingFolder, logsFolder);
+				//fillup box with basic media-file data
+				fillMainMediaInfo(mediaFile);
+				//instanciate ffprobeInfo file for analysing file
+				//fillup box with extended media-file data
+				fillExtendedMediaInfo(mediaFile);
 			}
 		}
 
@@ -128,6 +88,61 @@ namespace converter
 			if (workingFileDialog.ShowDialog() == true)
 			{
 				SavePath.Text = workingFileDialog.FileName;
+			}
+		}
+
+		//methods
+
+		public void fillMainMediaInfo(InputFile mediaFile)
+		{
+			FullFileName.Text = mediaFile.FullFileName;
+			FilePath.Text = mediaFile.FilePath;
+			FileName.Text = mediaFile.FileName;
+			FileExtension.Text = mediaFile.FileExtension;
+		}
+
+		public void fillExtendedMediaInfo(InputFile mediaFile)
+		{
+			NumberOfStreams.Content = "Number of streams:  " + mediaFile.NumberOfStreams;
+			TextBoxInfo.Clear();
+			for (int i = 0; i < mediaFile.NumberOfStreams; i++)
+			{
+				TextBoxInfo.AppendText("Stream " + i + ": " + mediaFile.TypeOfStream[i]);
+				if (mediaFile.TypeOfStream[i] == "video")
+				{
+					TextBoxInfo.AppendText(Environment.NewLine);
+					TextBoxInfo.AppendText("	Width: " + mediaFile.StreamWidth[i].ToString());
+					TextBoxInfo.AppendText(Environment.NewLine);
+					TextBoxInfo.AppendText("	Height: " + mediaFile.StreamHeight[i].ToString());
+					TextBoxInfo.AppendText(Environment.NewLine);
+					TextBoxInfo.AppendText("	Codec: " + mediaFile.StreamCodecName[i]);
+					TextBoxInfo.AppendText(Environment.NewLine);
+					TextBoxInfo.AppendText("	Duration: " + mediaFile.StreamDuration[i]);
+					TextBoxInfo.AppendText(Environment.NewLine);
+					TextBoxInfo.AppendText("	Frame rate: " + mediaFile.StreamFrameRate[i]);
+					TextBoxInfo.AppendText(Environment.NewLine);
+					TextBoxInfo.AppendText("	Aspect Ratio: " + mediaFile.StreamAspectRatio[i]);
+					TextBoxInfo.AppendText(Environment.NewLine);
+					TextBoxInfo.AppendText("	Bit Rate: " + mediaFile.StreamBitRate[i]);
+					TextBoxInfo.AppendText(Environment.NewLine);
+
+				}
+				TextBoxInfo.AppendText(Environment.NewLine);
+				if (mediaFile.TypeOfStream[i] == "audio")
+				{
+					TextBoxInfo.AppendText(Environment.NewLine);
+					TextBoxInfo.AppendText("	Codec: " + mediaFile.StreamCodecName[i]);
+					TextBoxInfo.AppendText(Environment.NewLine);
+					TextBoxInfo.AppendText("	Duration: " + mediaFile.StreamDuration[i]);
+					TextBoxInfo.AppendText(Environment.NewLine);
+					TextBoxInfo.AppendText("	Sample Rate: " + mediaFile.StreamSampleRate[i]);
+					TextBoxInfo.AppendText(Environment.NewLine);
+					TextBoxInfo.AppendText("	Number of Channels: " + mediaFile.StreamNumberOfChannels[i]);
+					TextBoxInfo.AppendText(Environment.NewLine);
+					TextBoxInfo.AppendText("	Bit Rate: " + mediaFile.StreamBitRate[i]);
+					TextBoxInfo.AppendText(Environment.NewLine);
+
+				}
 			}
 		}
 
