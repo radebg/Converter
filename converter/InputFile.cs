@@ -30,7 +30,6 @@ namespace converter
 		string[] streamSampleRate;
 		int?[] streamNumberOfChannels;
 		int?[] streamWidth, streamHeight;
-		string examinedFile;
 		string jsonString;
 		string workingFolder;
 		string logsFolder;
