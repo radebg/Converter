@@ -85,6 +85,7 @@ namespace converter
 				string stderr = ffprobe.StandardError.ReadLine();
 				File.AppendAllText(logsFolder + "\\stderr.txt", stderr + Environment.NewLine);
 				File.AppendAllText(logsFolder + "\\stdout.txt", stdout + Environment.NewLine);
+				
 			}
 			ffprobe.WaitForExit();
 
@@ -133,8 +134,6 @@ namespace converter
 		}
 
 		//properties
-
-
 		public string FileName => fileName;
 		public string FilePath => filePath;
 		public string FileExtension => fileExtension;

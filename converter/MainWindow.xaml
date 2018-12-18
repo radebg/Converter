@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:converter"
         mc:Ignorable="d"
-        Title="MainWindow" Height="653" Width="914">
+        Title="MainWindow" Height="653" Width="914" Initialized="Window_Initialized">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -26,7 +26,9 @@
                 </MenuItem>
             </Menu>
         </DockPanel>
-        <Button Content="Open file" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Margin="13,31,0,0" Click="File_Open_Button_Click"/>
+        <Button x:Name="OpenFileButton" Content="Open file" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Margin="13,31,0,0" Click="File_Open_Button_Click"/>
+        <Button x:Name="ConvertButton" Content="Convert" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="14,81,0,0" Click="Convert_Click"/>
+        <Button x:Name="SaveFileButton" Content="Save File" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="14,56,0,0" Click="Save_Click"/>
         <Label Content="FilName:" HorizontalAlignment="Left" Margin="500,144,0,0" VerticalAlignment="Top" Width="88" Grid.ColumnSpan="2"/>
         <Label Content="FilePath:" HorizontalAlignment="Left" Margin="500,122,0,0" VerticalAlignment="Top" Width="88" Grid.ColumnSpan="2"/>
         <Label Content="FileExtension:" HorizontalAlignment="Left" Margin="500,168,0,0" VerticalAlignment="Top" Width="88" Grid.ColumnSpan="2"/>
@@ -36,9 +38,8 @@
         <TextBox x:Name="FullFileName" HorizontalAlignment="Left" Height="19" Margin="94,32,0,0" TextWrapping="Wrap" Text="Select File" VerticalAlignment="Top" Width="736" Grid.ColumnSpan="2"/>
         <TextBox x:Name="TextBoxInfo" HorizontalAlignment="Left" Height="348" Margin="500,230,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="330" BorderThickness="0" VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2"/>
         <Label x:Name="NumberOfStreams" Content="Label" HorizontalAlignment="Left" Margin="500,199,0,0" VerticalAlignment="Top" Width="330" Grid.ColumnSpan="2"/>
-        <Button Content="Convert" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="14,81,0,0" Click="Convert_Click"/>
-        <Button Content="Save File" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="14,56,0,0" Click="Save_Click"/>
         <TextBox x:Name="SavePath" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="Same Path as Input File" VerticalAlignment="Top" Width="736" Margin="94,56,0,0" Grid.ColumnSpan="2" />
-        <TextBox x:Name="ConverterFeed" HorizontalAlignment="Left" Height="456" Margin="11,122,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="484"/>
+        <TextBox x:Name="ConverterFeed" HorizontalAlignment="Left" Height="456" Margin="11,122,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="484" FontSize="8"/>
+        <ProgressBar Margin="10,583,10,17" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>
