@@ -1,4 +1,6 @@
-﻿using Microsoft.Win32;
+﻿//Cloned to GitHub 10052002
+
+using Microsoft.Win32;
 using System;
 using System.IO;
 using System.Threading;
